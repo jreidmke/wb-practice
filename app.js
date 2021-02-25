@@ -62,3 +62,16 @@ var reverseStr = function(s, k) {
     };
     return s;
 };
+
+//NEW REVERSE WORDS WORD REVERSE
+
+var reverseWords = function(s) {
+    let sArr = s.split(' ');
+    let nArr = [];
+    for(let word of sArr) {
+        word = word.split('').reverse().join('');
+        nArr.push(word);
+        nArr.push(" ");
+    }
+    return nArr.join('').trim();
+};
