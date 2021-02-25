@@ -52,3 +52,13 @@ function reverseVowels2(s) {
     };
     return sArr.join('');
 };
+
+//REVERSE STRING EVERY K Spaces
+
+var reverseStr = function(s, k) {
+    for(let i=0; i < s.length; i += k*2) {
+        let subStr = s.slice(i, k + i);
+        s = s.replace(subStr, subStr.split('').reverse().join(''));
+    };
+    return s;
+};
