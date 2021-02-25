@@ -75,3 +75,32 @@ var reverseWords = function(s) {
     }
     return nArr.join('').trim();
 };
+
+var reverseWords = function(s) {
+    let wordStart = 0;
+    for(let i = 0; i <= s.length; i++) {
+        if(s[i] !== " " && i !== s.length){
+          continue;  
+        } else {
+            let subStr = s.slice(wordStart, i);
+            s = s.replace(subStr, subStr.split('').reverse().join(''));
+            wordStart = i + 1;
+        }
+    };
+    return s
+};
+
+var reverseWords = function(s) {
+    let wordStart = 0;
+    let nString = ""
+    for(let i = 0; i <= s.length; i++) {
+        if(s[i] !== " " && i !== s.length){
+          continue;  
+        } else {
+            let subStr = s.slice(wordStart, i);
+            nString += subStr.split('').reverse().join('') + " "
+            wordStart = i + 1;
+        }
+    };
+    return nString.trim()
+};
