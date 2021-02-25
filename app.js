@@ -201,4 +201,34 @@ function maxProfit(prices) {
     return answer
   }
     
-  
+
+//EXCEL PROBLEM
+  function titleToNumber(s) {
+    let output = 0
+    for (let i = 0; i < s.length; i++) {
+      const code = s[i].charCodeAt() - 64
+      output = output * 26 + code
+    }
+    return output
+  }
+
+//PASCAL
+
+function generate(numRows) {
+    var pascal = [];
+    for (var i = 0; i < numRows; i++) {
+        pascal[i] = [];
+        pascal[i][0] = 1;
+        for (var j = 1; j < i; j++) {
+            pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j]
+        }
+        pascal[i][i] = 1;
+    }
+    return pascal;
+};
+
+function missingNumber(nums) {
+    for(let i = 0; i <= nums.length; i++) {
+      if(nums.indexOf(i) === -1) return i;
+    }
+  };
