@@ -188,6 +188,17 @@ function maxProfit(prices) {
       }
     return true;
   }
+
+  //ROMAN
   
-  
+  function romanToInt(s) {
+    let answer = 0;
+    for(let i = s.length - 1; i >=0; i--) {
+      let num = roman[s.charAt(i)];
+      if(4 * num < answer) answer -= num;
+      else answer += num;
+    };
+    return answer
+  }
+    
   
