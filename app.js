@@ -286,3 +286,24 @@ function camelToTitle(s) {
 }
 
 camelToTitle("helloThisIsFun");
+
+function binarySearch(arr, el) {
+  let left = 0;
+  let right = arr.length - 1; 
+  while(left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if(mid === el) return mid - 1; 
+    if(el > arr[mid]) {
+      left = mid+1;
+    };
+    if(el < arr[mid]) {
+      right = mid - 1;
+    }
+  };
+};
+
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+binarySearch(x, 4);
+
+
