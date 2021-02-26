@@ -378,3 +378,9 @@ x = "assesses";
 y = "sses";
 
 substringCounter(x, y);
+
+function substringCounter(string, sub, counter = 0) {
+  if(!string.length) return counter;
+  if(string.substr(0, sub.length) === sub) counter++;
+  return substringCounter(string.slice(1), sub, counter);
+};
