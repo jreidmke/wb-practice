@@ -329,5 +329,32 @@ function mostFrequent(arr) {
   return item;
 }
 
+function mostFrequent(arr) {
+  let obj = {};
+  for(let i of arr) {
+    if(obj[i] > 0) {
+      obj[i]++
+    } else {
+      obj[i] = 1;
+    }
+  };
+  let max = 1;
+  let item;
+  for(prop in obj) {
+    if(obj[prop] > max) {
+      max = obj[prop]
+      item = prop;
+    }
+  };
+  return item
+};
 
+
+
+y = [1, 1, 1, 3];
+
+mostFrequent(y)
+
+//   let sorted =  Object.entries(obj).sort((a, b) => a[1] - b[1]); 
+//   return sorted[sorted.length - 1]
 
