@@ -358,3 +358,23 @@ mostFrequent(y)
 //   let sorted =  Object.entries(obj).sort((a, b) => a[1] - b[1]); 
 //   return sorted[sorted.length - 1]
 
+function substringCounter(string, sub) {
+  //variable counter
+  let counter = 0;
+  //loop through our string
+  for(let i = 0; i < string.length; i++) {
+    if(string.substr(i, sub.length) === sub) {
+      counter++;
+    }
+  };
+  return counter;
+  //substring starting at i, ending at length of sub;
+  //anytime that conditon met
+  //increase counter!
+};
+
+x = "assesses";
+
+y = "sses";
+
+substringCounter(x, y);
