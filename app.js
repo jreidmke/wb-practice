@@ -233,7 +233,7 @@ function missingNumber(nums) {
     }
   };
 
-  var firstUniqChar = function(s) {
+function fdas(s) {
     let map = {}
 
 for (let char of s) {
@@ -245,4 +245,10 @@ for (let i = 0; i < s.length; i++) {
 }
     
 return -1
+};
+
+function reverseString(s, reverseS="") {
+  if(s.length === 0) return reverseS;
+  reverseS += s[s.length - 1];
+  return reverseString(s.slice(0, s.length - 1), reverseS);
 };
