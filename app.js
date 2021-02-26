@@ -305,5 +305,9 @@ function binarySearch(arr, el) {
 x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 binarySearch(x, 4);
+function titleToCamel(s) {
+  s = s.replace(s[0], s[0].toLowerCase()).replaceAll(' ', '');
+  return s;
+};
 
 
