@@ -252,3 +252,16 @@ function reverseString(s, reverseS="") {
   reverseS += s[s.length - 1];
   return reverseString(s.slice(0, s.length - 1), reverseS);
 };
+
+
+function addToElement(arr, idx=0, char="a") {
+  //conditional to check if there is still operation left to complete
+  if(idx > arr.length - 1) return arr;
+  //access the element we are attempting to manipulate/modify
+  //manipulate the element
+  arr[idx] = char.concat(arr[idx]);
+  //recall our function with new arguemnts.
+  return addToElement(arr, idx=idx += 1); 
+}
+
+addToElement(["james", "pete", "maria"]);
