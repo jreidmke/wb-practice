@@ -265,3 +265,24 @@ function addToElement(arr, idx=0, char="a") {
 }
 
 addToElement(["james", "pete", "maria"]);
+
+
+function camelToTitle(s) {
+  let newStr = "";
+  let left = 0;
+  //add first substring
+  for(let i = 0; i < s.length; i++) {
+    if(s[i] === s[i].toUpperCase()) {
+      newStr += s.slice(left, i) + " ";
+      left = i;
+    }
+    if(i >= s.length - 1) {
+      newStr += s.slice(left, i+1);
+    };
+    continue;
+  };
+  newStr = newStr.replace(newStr[0], newStr[0].toUpperCase());
+  return newStr;
+}
+
+camelToTitle("helloThisIsFun");
