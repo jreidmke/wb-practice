@@ -310,4 +310,24 @@ function titleToCamel(s) {
   return s;
 };
 
+function mostFrequent(arr) {
+  let item;
+  let tempCount = 0;
+  let maxCount = 1;
+  for(let i = 0; i < arr.length; i++) {
+    for(let j=i; j < arr.length; j++) {
+      if(arr[i] === arr[j]) {
+        tempCount++;
+      };
+      if(tempCount > maxCount) {
+        item=arr[i];
+        maxCount=tempCount;
+      }
+    }
+    tempCount=0; 
+  };
+  return item;
+}
+
+
 
